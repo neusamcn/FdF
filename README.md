@@ -46,3 +46,12 @@ AI was used as a support for research in order to find and better understand the
 ### minilibx-linux
 
 - https://github.com/42Paris/minilibx-linux
+- https://harm-smits.github.io/42docs/libs/minilibx.html
+
+### Isometric Projection
+
+-
+
+### Bresenham Alrgorithm
+
+-
