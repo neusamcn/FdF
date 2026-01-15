@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ncruz-ne <ncruz-ne@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ncruz-ne <ncru-ne@student.42lisboa.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/14 20:28:24 by ncruz-ne          #+#    #+#             */
-/*   Updated: 2026/01/15 00:11:25 by ncruz-ne         ###   ########.fr       */
+/*   Created: 2025/04/11 12:24:07 by ncruz-ne          #+#    #+#             */
+/*   Updated: 2025/04/12 12:56:20 by ncruz-ne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/fdf.h"
+#include "libft.h"
 
-int	main(int ac, char **av)
+int	ft_isalnum(int c)
 {
-	return (0);
+	return (ft_isalpha(c) || ft_isdigit(c));
 }

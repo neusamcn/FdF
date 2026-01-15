@@ -1,18 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncruz-ne <ncruz-ne@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/14 20:28:24 by ncruz-ne          #+#    #+#             */
-/*   Updated: 2026/01/15 00:11:25 by ncruz-ne         ###   ########.fr       */
+/*   Created: 2025/04/23 11:17:50 by ncruz-ne          #+#    #+#             */
+/*   Updated: 2025/05/12 18:22:34 by ncruz-ne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/fdf.h"
+#include "libft.h"
 
-int	main(int ac, char **av)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	return (0);
+	void	*ptr;
+	size_t	flowcheck;
+
+	if (nmemb == 0 || size == 0)
+	{
+		ptr = malloc(0);
+		return (ptr);
+	}
+	flowcheck = nmemb * size;
+	if (flowcheck / nmemb == size)
+	{
+		ptr = malloc(nmemb * size);
+		if (ptr == NULL)
+			return (NULL);
+		ft_bzero(ptr, size * nmemb);
+		return (ptr);
+	}
+	return (NULL);
 }

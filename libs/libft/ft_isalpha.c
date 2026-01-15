@@ -1,18 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ncruz-ne <ncruz-ne@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ncruz-ne <ncruz-ne@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/14 20:28:24 by ncruz-ne          #+#    #+#             */
-/*   Updated: 2026/01/15 00:11:25 by ncruz-ne         ###   ########.fr       */
+/*   Created: 2025/03/07 12:27:22 by ncruz-ne          #+#    #+#             */
+/*   Updated: 2025/04/12 12:55:20 by ncruz-ne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/fdf.h"
+#include "libft.h"
 
-int	main(int ac, char **av)
+int	ft_isalpha(int c)
 {
+	if (c > 96 && c < 123)
+		return (1024);
+	if (c > 64 && c < 91)
+		return (1024);
 	return (0);
 }

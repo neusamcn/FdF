@@ -1,18 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncruz-ne <ncruz-ne@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/14 20:28:24 by ncruz-ne          #+#    #+#             */
-/*   Updated: 2026/01/15 00:11:25 by ncruz-ne         ###   ########.fr       */
+/*   Created: 2025/04/16 19:09:38 by ncruz-ne          #+#    #+#             */
+/*   Updated: 2025/05/08 14:08:26 by ncruz-ne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/fdf.h"
+#include "libft.h"
 
-int	main(int ac, char **av)
+char	*ft_strchr(const char *s, int c)
 {
-	return (0);
+	int				i;
+	unsigned char	chr;
+	char			*p;
+
+	i = 0;
+	chr = (unsigned char)c;
+	p = (char *)s;
+	while (*(p + i))
+	{
+		if (*(p + i) == chr)
+			return (p + i);
+		i++;
+	}
+	if (chr == '\0')
+		return (p + i);
+	return (NULL);
 }

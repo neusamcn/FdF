@@ -6,13 +6,14 @@
 /*   By: ncruz-ne <ncruz-ne@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 11:42:14 by ncruz-ne          #+#    #+#             */
-/*   Updated: 2026/01/14 21:09:14 by ncruz-ne         ###   ########.fr       */
+/*   Updated: 2026/01/15 00:09:11 by ncruz-ne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FDF_H
 # define FDF_H
 
+# include "../libs/libft/libft.h"
 # include <math.h>
 
 #endif

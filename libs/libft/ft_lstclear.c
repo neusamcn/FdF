@@ -1,18 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncruz-ne <ncruz-ne@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/14 20:28:24 by ncruz-ne          #+#    #+#             */
-/*   Updated: 2026/01/15 00:11:25 by ncruz-ne         ###   ########.fr       */
+/*   Created: 2025/05/09 22:15:37 by ncruz-ne          #+#    #+#             */
+/*   Updated: 2025/05/11 13:55:50 by ncruz-ne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/fdf.h"
+#include "libft.h"
 
-int	main(int ac, char **av)
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	return (0);
+	t_list	*currentnode;
+	t_list	*nextnode;
+
+	if (!lst || !del || *lst == NULL)
+		return ;
+	currentnode = *lst;
+	while (currentnode != NULL)
+	{
+		nextnode = currentnode->next;
+		del(currentnode->content);
+		free(currentnode);
+		currentnode = nextnode;
+	}
+	*lst = NULL;
 }

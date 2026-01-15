@@ -1,18 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncruz-ne <ncruz-ne@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/14 20:28:24 by ncruz-ne          #+#    #+#             */
-/*   Updated: 2026/01/15 00:11:25 by ncruz-ne         ###   ########.fr       */
+/*   Created: 2025/04/15 19:51:33 by ncruz-ne          #+#    #+#             */
+/*   Updated: 2025/05/08 22:06:07 by ncruz-ne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/fdf.h"
+#include "libft.h"
 
-int	main(int ac, char **av)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	return (0);
+	size_t	i_s;
+	size_t	lendst;
+	size_t	lensrc;
+
+	i_s = 0;
+	lendst = ft_strlen(dst);
+	lensrc = ft_strlen(src);
+	if (size > lendst)
+	{
+		while (i_s < size - lendst - 1 && src[i_s])
+		{
+			dst[lendst + i_s] = src[i_s];
+			i_s++;
+		}
+		dst[lendst + i_s] = '\0';
+		return (lendst + lensrc);
+	}
+	return (size + lensrc);
 }

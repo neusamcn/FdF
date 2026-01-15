@@ -2,19 +2,18 @@
 
 ## Description
 
-The goal is to build a small message-passing system where a client program sends a string to a server program, using only UNIX signals as the communication mechanism.
-We could also call this a custom inter-process communication (IPC) protocol on top of UNIX signals.
+For this project, minilibX is used, which is a simple X-Window (X11R6) programming API in C, designed for students, suitable for X-beginners.
+
+The X Window system (X11, or simply X) is a windowing system for bitmap displays, common on Unix-like operating systems.
+
+X provides the basic framework for a GUI environment: drawing and moving windows on the displau device and interacting with a mouse and keyboard.
 
 
 
 ## Instructions
 
 1. Compile the project with `make` or `make all`.
-2. Open 2 or more terminal windows at the root of the project folder.
-3. From one window we'll start the server program: `./server`
-4. In other windows we start the client program, adding the PID that was provided by `./server` and a message, as following: `./client server_PID "message"`
-5. Confirm messages are received from different terminals.
-6. Use `kill server_PID` at a client's terminal to end the program gracefully.
+2. 
 
 ### Recommendations for testing:
 - For a complete leak check and cleaner outputs:
@@ -37,4 +36,13 @@ AI was used as a support for research in order to find and better understand the
 #### Wireframe model
 
 - https://en.wikipedia.org/wiki/Wire-frame_model
-- 
+- https://mapsystemsindia.com/resources/what-is-3d-wireframe-modeling.html
+- https://www.howengineeringworks.com/questions/what-is-wireframe-modeling-and-where-is-it-used/
+
+### X-Window System
+
+- https://en.wikipedia.org/wiki/X_Window_System
+
+### minilibx-linux
+
+- https://github.com/42Paris/minilibx-linux
