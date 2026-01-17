@@ -48,10 +48,14 @@ AI was used as a support for research in order to find and better understand the
 - https://github.com/42Paris/minilibx-linux
 - https://harm-smits.github.io/42docs/libs/minilibx.html
 
+### Data alignment
+
+- https://www.youtube.com/watch?v=iz958I8Xb2g
+
 ### Isometric Projection
 
 -
 
-### Bresenham Alrgorithm
+### Bresenham's Line Generation Algorithm
 
--
+- https://www.geeksforgeeks.org/dsa/bresenhams-line-generation-algorithm/
