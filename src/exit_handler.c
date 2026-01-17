@@ -6,7 +6,7 @@
 /*   By: ncruz-ne <ncruz-ne@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/17 12:32:29 by ncruz-ne          #+#    #+#             */
-/*   Updated: 2026/01/17 18:15:14 by ncruz-ne         ###   ########.fr       */
+/*   Updated: 2026/01/17 18:35:52 by ncruz-ne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,10 @@ static void	free_close_map(t_map *map)
 		if (map->name)
 			free(map->name);
 		if (map->fd >= 0)
+		{
 			close(map->fd);
+			map->fd = -1;
+		}
 		if (map->pts)
 			free(map->pts);
 		if (&map->matrix)
@@ -78,7 +81,7 @@ void	err_free_exit(t_data *data, t_img *img, t_map *map, char *err_msg)
 	err_exit_toggle(err_msg);
 }
 
-// considering using perror() and strerror()
+// considering using perror(), strerror() and STDERR_FILENO
 
 // need clear_image?
 // void	clear_image(t_image *img, int len)

@@ -6,7 +6,7 @@
 #    By: ncruz-ne <ncruz-ne@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/14 11:42:58 by ncruz-ne          #+#    #+#              #
-#    Updated: 2026/01/17 17:04:27 by ncruz-ne         ###   ########.fr        #
+#    Updated: 2026/01/17 18:51:46 by ncruz-ne         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -83,9 +83,6 @@ debug: $(NAME)
 	@valgrind --log-file=valgrind_log.log --leak-check=full \
 	--show-leak-kinds=all --track-origins=yes -s ./$(NAME) " $(MAP_NAME) "
 
-# maps:
-# 	@curl
-# 	@echo "\nMaps for FdF downloaded.\n"
 
 # readme:
 # 	@curl -sS -o README.md \
@@ -93,4 +90,4 @@ debug: $(NAME)
 # 	@echo "\nREADME.md downloaded.\n"
 
 
-.PHONY: all clean fclean re debug # maps readme
+.PHONY: all clean fclean re debug # readme

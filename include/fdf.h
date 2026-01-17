@@ -6,7 +6,7 @@
 /*   By: ncruz-ne <ncruz-ne@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 11:42:14 by ncruz-ne          #+#    #+#             */
-/*   Updated: 2026/01/17 18:02:24 by ncruz-ne         ###   ########.fr       */
+/*   Updated: 2026/01/17 21:21:09 by ncruz-ne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,6 @@ typedef struct s_data
 
 
 void	err_free_exit(t_data *data, t_img *img, t_map *map, char *err_msg);
-void	map_init(char **av);
+t_map	*map_init(char **av);
 
 #endif

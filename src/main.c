@@ -6,7 +6,7 @@
 /*   By: ncruz-ne <ncruz-ne@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 20:28:24 by ncruz-ne          #+#    #+#             */
-/*   Updated: 2026/01/17 16:20:19 by ncruz-ne         ###   ########.fr       */
+/*   Updated: 2026/01/17 21:20:51 by ncruz-ne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,7 +93,7 @@ int	main(int ac, char **av)
 
 	if (ac == 2)
 	{
-		map_init(av);
+		map = map_init(av);
 		data->mlx_ptr = mlx_init();
 		if (!data->mlx_ptr)
 			err_free_exit(data, &(data->img), map, "mlx couldn't start.");

@@ -6,11 +6,28 @@
 /*   By: ncruz-ne <ncruz-ne@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/16 19:19:59 by ncruz-ne          #+#    #+#             */
-/*   Updated: 2026/01/17 18:24:32 by ncruz-ne         ###   ########.fr       */
+/*   Updated: 2026/01/17 21:23:51 by ncruz-ne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/fdf.h"
+
+static void	map_opt(t_map *map)
+{
+	size_t	cols_i;
+
+	cols_i = 0;
+	while (cols_i < map->cols)
+	{
+		map->matrix[cols_i] = map->pts + (cols_i * map->rows);
+		cols_i++;
+	}
+	if (map->fd >= 0)
+	{
+		close(map->fd);
+		map->fd = -1;
+	}
+}
 
 static void	count_map_rows(t_map *map, char	*line)
 {
@@ -67,9 +84,10 @@ static char	*map_name_check(char *map_name)
 	return (NULL);
 }
 
-void	map_init(char **av)
+t_map	*map_init(char **av)
 {
 	t_map	*map;
+	size_t	cols_i;
 
 	map = ft_calloc(1, sizeof(t_map));
 	if (!map)
@@ -85,7 +103,9 @@ void	map_init(char **av)
 	map->pts = ft_calloc(map->cols * map->rows, sizeof(t_point));
 	if (!map->pts)
 		err_free_exit((t_data *)0, (t_img *)0, map, "Can't build map->pts.");
-	map->matrix = ft_calloc(map->cols, sizeof(t_point *));
+	map->matrix = ft_calloc(map->rows, sizeof(t_point *));
 	if (!map->matrix)
 		err_free_exit((t_data *)0, (t_img *)0, map, "Can't build map->matrix.");
+	map_opt(map);
+	return (map);
 }
