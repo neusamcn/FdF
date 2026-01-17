@@ -6,7 +6,7 @@
 #    By: ncruz-ne <ncruz-ne@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/14 11:42:58 by ncruz-ne          #+#    #+#              #
-#    Updated: 2026/01/17 00:08:33 by ncruz-ne         ###   ########.fr        #
+#    Updated: 2026/01/17 17:04:27 by ncruz-ne         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ LIBFT_FLAGS = -L$(LIBFT_DIR) -lft
 MLX_FLAGS = -L$(MLX_DIR) -lmlx_Linux -L/usr/lib -lXext -lX11 -lm -lz
 
 SRC_DIR = src
-SRC = $(SRC_DIR)/main.c $(SRC_DIR)/map_parse.c
+SRC = $(SRC_DIR)/main.c $(SRC_DIR)/exit_handler.c $(SRC_DIR)/map_init.c
 
 OBJ_DIR = obj
 OBJ = $(patsubst $(SRC_DIR)/%.c,$(OBJ_DIR)/%.o,$(SRC))
@@ -83,10 +83,14 @@ debug: $(NAME)
 	@valgrind --log-file=valgrind_log.log --leak-check=full \
 	--show-leak-kinds=all --track-origins=yes -s ./$(NAME) " $(MAP_NAME) "
 
+# maps:
+# 	@curl
+# 	@echo "\nMaps for FdF downloaded.\n"
+
 # readme:
 # 	@curl -sS -o README.md \
 # 	https://raw.githubusercontent.com/neusamcn/FdF/refs/heads/main/README.md
 # 	@echo "\nREADME.md downloaded.\n"
 
 
-.PHONY: all clean fclean re debug # readme
+.PHONY: all clean fclean re debug # maps readme

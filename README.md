@@ -59,3 +59,11 @@ AI was used as a support for research in order to find and better understand the
 ### Bresenham's Line Generation Algorithm
 
 - https://www.geeksforgeeks.org/dsa/bresenhams-line-generation-algorithm/
+
+### perror()
+
+- 
+
+### strerror()
+
+- 

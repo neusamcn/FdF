@@ -6,7 +6,7 @@
 /*   By: ncruz-ne <ncruz-ne@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 11:42:14 by ncruz-ne          #+#    #+#             */
-/*   Updated: 2026/01/16 23:50:02 by ncruz-ne         ###   ########.fr       */
+/*   Updated: 2026/01/17 18:02:24 by ncruz-ne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,12 @@
 # include <math.h>
 # include <X11/X.h>
 # include <X11/keysym.h>
+# include <errno.h>
 # include "../libs/libft/libft.h"
 # include "../libs/minilibx-linux/mlx.h"
 
-# define WIN_WIDTH 800
-# define WIN_HEIGHT 800
+# define WIN_W 800
+# define WIN_H 800
 
 typedef struct s_img
 {
@@ -47,22 +48,23 @@ typedef struct s_point
 
 typedef struct s_map
 {
+	char	*name;
+	int		fd;
 	size_t	rows;
 	size_t	cols;
 	t_point	*pts;
-	t_point	**points;
+	t_point	**matrix;
 }	t_map;
 
 typedef struct s_data
 {
-	void	*mlx;
-	void	*win;
+	void	*mlx_ptr;
+	void	*win_ptr;
 	t_img	img;
 }	t_data;
 
 
-char	*map_name_check(char *map_name);
-// t_map	*open_map(char *map_name);
-// void	get_dims(t_map	*map, int fd);
+void	err_free_exit(t_data *data, t_img *img, t_map *map, char *err_msg);
+void	map_init(char **av);
 
 #endif
