@@ -6,7 +6,7 @@
 #    By: ncruz-ne <ncruz-ne@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/14 11:42:58 by ncruz-ne          #+#    #+#              #
-#    Updated: 2026/01/18 06:03:38 by ncruz-ne         ###   ########.fr        #
+#    Updated: 2026/01/18 06:44:04 by ncruz-ne         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -80,7 +80,7 @@ re: fclean all
 
 
 # Debugger:
-MAP_NAME = maps/test_maps/julia.fdf
+MAP_NAME = maps/test_maps/42.fdf
 
 debug: $(NAME)
 	@valgrind --log-file=valgrind_log.log --leak-check=full \

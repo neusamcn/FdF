@@ -6,28 +6,16 @@ For this project, minilibX is used, which is a simple X-Window (X11R6) programmi
 
 The X Window system (X11, or simply X) is a windowing system for bitmap displays, common on Unix-like operating systems.
 
-X provides the basic framework for a GUI environment: drawing and moving windows on the displau device and interacting with a mouse and keyboard.
+X provides the basic framework for a GUI environment: drawing and moving windows on the display device and interacting with a mouse and keyboard.
 
 
 
 ## Instructions
 
 1. Compile the project with `make` or `make all`.
-2. 
+2. To test for leaks and input parsing, change `MAP_NAME` in `Makefile` and run `make debug`.
 
-### Recommendations for testing:
-- For a complete leak check and cleaner outputs:
-	- Server:
 
-		  valgrind --log-file=valg_server_log.log --leak-check=full --show-leak-kinds=all -s ./server
-
-	- Client (for each message sent):
-		
-		  valgrind --log-file=valg_client_log.log --leak-check=full --show-leak-kinds=all -s ./client server_PID "message"
-
-- To check the time it takes to display 100 characters (should be under 1 second):
-
-	  time ./client server_PID "abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ 0123456789 abcdefghijklmnopqrstuvwxyz 9876543210"
 
 ## Resources
 
