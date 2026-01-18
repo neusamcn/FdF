@@ -21,42 +21,42 @@ X provides the basic framework for a GUI environment: drawing and moving windows
 
 AI was used as a support for research in order to find and better understand the most relevant resources and concepts related to this project.
 
-### Wireframe model
+#### Wireframe model
 
 - https://en.wikipedia.org/wiki/Wire-frame_model
 - https://mapsystemsindia.com/resources/what-is-3d-wireframe-modeling.html
 - https://www.howengineeringworks.com/questions/what-is-wireframe-modeling-and-where-is-it-used/
 
-### X-Window System
+#### X-Window System
 
 - https://en.wikipedia.org/wiki/X_Window_System
 - https://valgrind.org/docs/manual/manual-core.html#manual-core.suppress:~:text=If%20you%27re%20using,a%20suppressions%20file.
 
-### minilibx-linux
+#### minilibx-linux
 
 - https://github.com/42Paris/minilibx-linux
 - https://harm-smits.github.io/42docs/libs/minilibx.html
 
-### Data alignment
+#### Data alignment
 
 - https://www.youtube.com/watch?v=iz958I8Xb2g
 
-### Isometric Projection
+#### Isometric Projection
 
 - https://en.wikipedia.org/wiki/Isometric_projection
 
-### Bresenham's Line Generation Algorithm
+#### Bresenham's Line Generation Algorithm
 
 - https://www.geeksforgeeks.org/dsa/bresenhams-line-generation-algorithm/
 
-### perror()
+#### perror()
 
 - https://www.man7.org/linux/man-pages/man3/perror.3.html
 
-### strerror()
+#### strerror()
 
 - https://www.man7.org/linux/man-pages/man3/strerror.3.html
 
-### Mathematical constants from math.h
+#### Mathematical constants from math.h
 
 - https://www.gnu.org/software/libc/manual/html_node/Mathematical-Constants.html
