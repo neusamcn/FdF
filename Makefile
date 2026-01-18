@@ -6,7 +6,7 @@
 #    By: ncruz-ne <ncruz-ne@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/14 11:42:58 by ncruz-ne          #+#    #+#              #
-#    Updated: 2026/01/17 18:51:46 by ncruz-ne         ###   ########.fr        #
+#    Updated: 2026/01/18 06:03:38 by ncruz-ne         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,10 @@ LIBFT_FLAGS = -L$(LIBFT_DIR) -lft
 MLX_FLAGS = -L$(MLX_DIR) -lmlx_Linux -L/usr/lib -lXext -lX11 -lm -lz
 
 SRC_DIR = src
-SRC = $(SRC_DIR)/main.c $(SRC_DIR)/exit_handler.c $(SRC_DIR)/map_init.c
+SRC = $(SRC_DIR)/main.c $(SRC_DIR)/exit_handler.c $(SRC_DIR)/map_init.c \
+	$(SRC_DIR)/map_parser.c $(SRC_DIR)/win_init.c $(SRC_DIR)/img_render.c \
+	$(SRC_DIR)/ft_atoi_base.c $(SRC_DIR)/ft_atol.c $(SRC_DIR)/colour_parser.c \
+	$(SRC_DIR)/colour_parser_utils.c
 
 OBJ_DIR = obj
 OBJ = $(patsubst $(SRC_DIR)/%.c,$(OBJ_DIR)/%.o,$(SRC))
@@ -77,17 +80,12 @@ re: fclean all
 
 
 # Debugger:
-MAP_NAME = file.fdf
+MAP_NAME = maps/test_maps/julia.fdf
 
 debug: $(NAME)
 	@valgrind --log-file=valgrind_log.log --leak-check=full \
-	--show-leak-kinds=all --track-origins=yes -s ./$(NAME) " $(MAP_NAME) "
+	--show-leak-kinds=all --track-origins=yes -s \
+	./$(NAME) " $(MAP_NAME) "
 
 
-# readme:
-# 	@curl -sS -o README.md \
-# 	https://raw.githubusercontent.com/neusamcn/FdF/refs/heads/main/README.md
-# 	@echo "\nREADME.md downloaded.\n"
-
-
-.PHONY: all clean fclean re debug # readme
+.PHONY: all clean fclean re debug
